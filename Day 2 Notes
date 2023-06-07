@@ -1,1 +1,44 @@
-adfas
+Arrays -> lists, indexed at 0, has elements
+Saves outputs as arrays
+
+(Get-Process).GetType() -> gets type of anything, every newline is a part of an array
+
+each line has its own index position
+
+
+$proc = get-process, $proc[0], will get the first index, [-1] for the last one
+ $procs -is [array]: true
+ $var -is [array]: false
+ 
+ to find the amount of items in an array
+ 
+ $proc.Count
+ $proc.length
+
+create an array 
+
+  $array = 1,5,10
+  $array = 1..25
+
+
+polymorphic arrays
+  
+can store multiple data types in polymorphic arrays
+
+$array2 = "world". "hello", 5, 10, (Get-Date)
+
+($array[-1]).gettype() -> system.valuetype
+
+out of index does not get any errors for polymorphic arrays
+
+create an empty array
+  $array3=@()
+  
+$array[$array.Count-1]
+
+(-4..10)[4] gets a number in range -4 to 10 so gets -3
+
+can display multiple indexes of the array at once
+
+$array[4,0,1,2] -> in the order specified
+
