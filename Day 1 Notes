@@ -67,3 +67,43 @@ Aliases
   get-process | Get-Member -MmeberType -> gets the methods
   -------------------------------------------------------------------------------------------------
   Get-Process -name
+  
+  Pipleine
+  ouput used as input for another command
+  
+  -------------------------------------------------------------------------
+  Get-Service | Format-Table Name, Status <-properties of the members of the services, gte-member to get the properties of the object
+  
+  --------------------------------------------------------------------------------------
+  Write-Host vs Write-Output
+  
+  Write-Host -> doesn't put it to the pipleline, there is no output
+  
+  Write-Output -> writes the output so can be used to pipe
+  
+  ------------------------------------------------------------------------------------
+  Variables
+  ------------------------------------------------------------------------------------
+  Get-Variable -> gets the system variables
+  
+  set a variable 
+    
+    $a = 10
+    
+  Needs the dollar sign
+  
+  Get-Variable {variable}
+  can set multiple variables at a time
+  $a, $b, $c = 5, 6, 4
+  
+  To see if the variable is there
+  Test-Path variable:{variable}
+  
+  remove-variable ${variable} to remove a variables and its value
+  
+  $var = "George"
+  write-host "Hello $var", will be able to subistite a variable
+  single quotes is string literal
+  
+  ----------------------------------------------------------------------------------------------------------------------------
+
