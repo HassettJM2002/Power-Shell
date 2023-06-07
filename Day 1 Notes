@@ -108,4 +108,16 @@ Aliases
   ----------------------------------------------------------------------------------------------------------------------------
 Pratcitical Exercises
 
+update-help -Force
+get-process
+get-service
+Write-Host(PrintToScreen) / Write-Object(Pipeline)
+
+get-process | sort starttime | select -skip 1 -first 1 -last 1 | ft processname, starttime
+
+get-date | format-table dayofweek
+
+$var2 = Get-Random
+Invoke Expression $var2
+
 
