@@ -6,3 +6,64 @@ To get RDP up
 
 xfreerdp /u:student /v:10.50.37.222 /dynamic-resolution +glyph-cache +clipboard
 
+Poweshell Basics
+  cmdlets -> commands are verb noun, starts with verb and ends with noun
+  Get-Verb: for example gets all the verbs possible to use with commands
+  Get-Command -Verb get: gets all the commands with get verb
+  Get-Service -Noun service: gets all the commands in nouns
+  
+  Capitilzation does not matter
+  
+  Still has access to the window commands
+  
+  cndlet -options <parameters>
+  
+  Get-Help cmdlet to get help on the cmdlet
+  Get-Help Get-Process -Full
+  
+  Can use wild cards
+    Get-Help *cmd*
+  Update-Help to update the help
+  Get-Help -Examples Get-Process
+  Get-Help Get-Process -Showwindow
+  Don't necessarily need the option name, its positional
+  [-option] the brackets means that the option is a optional
+  <-nonoptional> the gators mean that the paramter is not optional
+  
+  If the whole thing is in square brackets, then its optional, but if some of its in the gators then its requrired
+  
+  Read Directory
+  
+    Get-Childitem -path C:\Windows -filter *.exe -name
+    
+Aliases
+
+  find the real command for an alias
+    
+    $alias:{command}
+    
+  find all the aliases for a certain cmdlet
+  
+    Get-Alias -Definition get-childitem
+    
+  Set-Alias edit notepad.exe
+  Set-Alias {alias name} {short cutted command}
+  
+  Remove-Item alias:{command alias}
+  
+  Get-Host
+  -Gets version of powershell
+  
+  Powershell is a object oritented programming 
+  
+  Powershell
+    attributes/properties
+    methods/things it can do
+    
+  (Get-Process).ProcessName
+  (Get-Process notedpad).kill()
+  -------------------------------------------------------------------------------------------------
+  get-process | get-member -> to find the methods
+  get-process | Get-Member -MmeberType -> gets the methods
+  -------------------------------------------------------------------------------------------------
+  Get-Process -name
