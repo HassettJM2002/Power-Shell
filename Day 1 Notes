@@ -2,3 +2,7 @@
 POWERSHELL
 #############
 
+To get RDP up
+
+xfreerdp /u:student /v:10.50.37.222 /dynamic-resolution +glyph-cache +clipboard
+
