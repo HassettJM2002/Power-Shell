@@ -186,8 +186,16 @@ Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----                                                                                                             
 -a----        12/23/2022  11:02 AM           1370 ThirdPartyNoticesBySHS.txt
 
+
 PS C:\windows\system32> Get-Process | Where-Object {$_.Name -like "*powershell*"}
+
+#-not/like: wild card matching
+#-match: regex
+#-eq: no wild cards, exact match
 
 Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName                                                                                              
 -------  ------    -----      -----     ------     --  -- -----------                                                                                              
    1096      90   480036     533432     470.73   4632   2 powershell_ise 
+
+1,2,3,1,2,3 | Sort-Object | Get-Unique #Needs to be in this order, will not work the other way
+
