@@ -80,3 +80,39 @@ foreach ($line in $TargetingArray) {
    }
 }
 
+-------------------------------------------------------------------------
+Script Block
+-------------------------------------------------------------------------
+$myblock = { get-service | format-table name, status}
+& $myblock -> will run the block
+
+$a = 1
+$b = {1 + 1}
+
+$a += &$b
+$a = 3
+
+good for getting live results from a command
+-----------------------------------------------------------------------
+Sorting and Grouping
+-----------------------------------------------------------------------
+
+Get-Childitem | Sort-Object -Descending
+
+Sort-Object Options
+ -Descending
+ -Property <property of previous piped command> #Get properties with Get-Memeber
+ 
+Grouping Objects
+ 
+Get-Service | Group-Object status
+ will group results based on the status
+ 
+ Count Name                      Group                                                                                                                              
+----- ----                      -----                                                                                                                              
+  180 Stopped                   {AarSvc_2cb22e1, AJRouter, ALG, AppIDSvc...}                                                                                       
+   83 Running                   {Appinfo, AudioEndpointBuilder, Audiosrv, BFE...}                                                                                  
+
+Get-Childeitem | Group-Object {$_.length -lt 1kb}
+{$_.} pipeline variable, whats being passed through the pipeline
+
