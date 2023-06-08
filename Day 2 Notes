@@ -107,7 +107,9 @@ Grouping Objects
  
 Get-Service | Group-Object status
  will group results based on the status
- 
+
+Example output)
+
  Count Name                      Group                                                                                                                              
 ----- ----                      -----                                                                                                                              
   180 Stopped                   {AarSvc_2cb22e1, AJRouter, ALG, AppIDSvc...}                                                                                       
@@ -116,3 +118,42 @@ Get-Service | Group-Object status
 Get-Childeitem | Group-Object {$_.length -lt 1kb}
 {$_.} pipeline variable, whats being passed through the pipeline
 
+Example output)
+
+
+Count Name                      Group                                                                                                                              
+----- ----                      -----                                                                                                                              
+  188 True                      {0409, AdvancedInstallers, am-et, AppLocker...}                                                                                    
+ 4323 False                     {69fe178f-26e7-43a9-aa7d-2b616b672dde_eventlogservice.dll
+
+1, 3, 5, 8, 2, 10 | Sort-Object -> Sorted Numerically
+'1', '3', '5', '8', '2', '10' | Sort-Object -> ASCII Value
+
+PS C:\windows\system32> 1..10 | Sort-Object -Property {Get-Random}
+5
+7
+9
+8
+1
+4
+10
+2
+6
+3
+
+PS C:\windows\system32> Get-Process | Select-Object -First 10
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName                                                                                              
+-------  ------    -----      -----     ------     --  -- -----------                                                                                              
+    228      13     7288      20296       0.08   2552   2 conhost                                                                                                  
+    527      20     1896       2428       4.69    464   0 csrss                                                                                                    
+    169      10     1620       1472       0.20    556   1 csrss                                                                                                    
+    339      14     1816       2816      15.81   6088   2 csrss                                                                                                    
+    416      16     4044       8852       2.52   2244   2 ctfmon                                                                                                   
+    218      16     3540       3524       0.13   3936   2 dllhost                                                                                                  
+    698      24    18736      17192       0.50   1120   1 dwm                                                                                                      
+    800      34    35668      81740      13.73   4180   2 dwm                                                                                                      
+   2042      79    38160      62908      21.09   4984   2 explorer                                                                                                 
+     37       5     1196       1272       0.00    868   1 fontdrvhost
+     
+     
