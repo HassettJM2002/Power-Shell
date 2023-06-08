@@ -168,6 +168,7 @@ csrss   6088
 -expand property expans the property
 
 Where-Object - Conditional, outputs what you want the condition to be
+
 PS C:\windows\system32> get-service | where-object {$_.Status -eq 'running'} | select-object -first 5
 
 Status   Name               DisplayName                           
@@ -178,3 +179,15 @@ Running  Audiosrv           Windows Audio
 Running  BFE                Base Filtering Engine                 
 Running  BrokerInfrastru... Background Tasks Infrastructure Ser...
 
+Get-Childitem *.txt | where-object {$_.Length -lt 1.5kb} #Length is in bytes
+Directory: C:\windows\system32
+
+Mode                 LastWriteTime         Length Name                                                                                                             
+----                 -------------         ------ ----                                                                                                             
+-a----        12/23/2022  11:02 AM           1370 ThirdPartyNoticesBySHS.txt
+
+PS C:\windows\system32> Get-Process | Where-Object {$_.Name -like "*powershell*"}
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName                                                                                              
+-------  ------    -----      -----     ------     --  -- -----------                                                                                              
+   1096      90   480036     533432     470.73   4632   2 powershell_ise 
