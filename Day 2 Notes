@@ -424,7 +424,7 @@ Writing / Reading from file
   specifies key value pairs
   ; semi colon to assign the keys
   
-  $mylist = @{First = "John"; Last = "Doe"; Mid = "Bon"; Age = "69"}
+  $mylist = @[Order]{First = "John"; Last = "Doe"; Mid = "Bon"; Age = "69"}
   
   Can refernce data like
   $mylist["Last"] or $mylist.last
@@ -437,3 +437,4 @@ Writing / Reading from file
  $list = @{ ele1 = 5; array1 = 1..5; array2= 6, 7, 8}
  can have nested arrays in the hash table
  
+list.remove("key")
