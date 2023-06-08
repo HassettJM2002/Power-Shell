@@ -298,3 +298,62 @@ cd [PSDrive]:
 -noncontains #if it does not contain
 -in # true or false
 -is #see if it is same type
+
+2 -eq 2 #True
+2 -eq  3 # false
+1,2,3 -eq 2 returns the value in it
+"abc" -eq "abc" #True
+"abc" -eq "abc", "def" #False
+"abc". "def" -eq "abc" #returns abc
+
+greater than
+8 -gt 6 #true
+7,8,9,10 -gt 8 #9, 10
+
+-like
+"Powershell" -like "*shell"
+"Poweshell", "Server" -like "*shell"
+
+-contains
+$fruit = apple, orrange, pear, tomato
+$fruit -contains 'tomato' #True
+
+-notlike
+"Pink" -notlike "[A-F]ink"
+
+Combination
+
+(($num -gt 1) -and ($num -lt 10))
+
+-------------------------------------------------------------------------------------------
+Flow COntrol
+
+if
+$x = 11
+if ($x -gt 10) {"$x is greater than 10"}
+
+$x=8
+if ($x -le 9) {
+ write-host "$x is not equal to 9" -ForegroundColor Gray
+ }
+ 8 is not equal to 9
+ 
+ if else
+ 
+ if ( Conditional Statemnet ){
+   Code Block
+ }
+ ifelse( Conditional Statement ){
+   Code Block
+ }
+ else {
+ }
+ 
+ $fruit = "C"
+ swithc($fruit) {
+ a {"apple"}
+ b {"banana"}
+ c {"cranberry"}
+ }
+ 
+ 
