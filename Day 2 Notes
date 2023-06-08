@@ -258,3 +258,43 @@ Adding Methods
  
  
  
+Exercise
+Create a custom Object
+$compinfo = Get-WmiObject Win32_ComputerSystem
+$osinfo = Get-WmiObject Win32_OperatingSystem
+$biosinfo = Get-wmiobject win32_BIOS
+$diskinfo = Get-WmiObject Win32_LogicalDisk
+
+$myobject = New-Object psobject
+
+$myobject | Add-Member -MemberType NoteProperty -name Coputername -Value $compinfo.name
+$myobject | Add-Member -MemberType NoteProperty -name OperatingSystem -Value $osinfo.Caption
+$myobject | Add-Member -MemberType NoteProperty -name Version -Value $osinfo.Version
+$myobject | Add-Member -MemberType NoteProperty -name Manafacturer $biosinfo.Manafacturer
+$myobject | Add-Member -MemberType NoteProperty -name Disks $diskinfo.__path
+
+-----------------------------------------------------------------------------------------------
+psproviders
+Get-PSDrive
+new-psdrive -name Z -PSProvider FileSystem -Root \\live.sysinternals.com\tools
+start-service -name webclient
+
+can cd z:
+cd [PSDrive]:
+
+-------------------------------------------------------------------------------------------------------
+-eq 
+-ne
+-gt
+-lt
+-le
+-ge
+-like
+-match
+-notlike
+-notmatch
+-replace #regex pattern
+-contains #is contained
+-noncontains #if it does not contain
+-in # true or false
+-is #see if it is same type
