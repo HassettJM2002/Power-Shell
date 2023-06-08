@@ -58,7 +58,7 @@ an array with 20 lines, all index posiotions, with boom in it
 1..20 -> array from 1, 20
 
 Target Array = @(
- (ele1,1 ele1,2 ele1,3)
+ (ele1,1 ele1,2 ele1,3),
  (ele2,1 ele 2,2 ele2,3)
 )
 
@@ -72,3 +72,11 @@ to get a value in a nested array
 $array[indexofarray][index1..][index2..]
 
 ---------------------------------------------------------------------
+LOOOPS
+---------------------------------------------------------------------
+foreach ($line in $TargetingArray) {
+  if ($line[-1] -eq 'Bejing') {
+   Write-Output $line
+   }
+}
+
