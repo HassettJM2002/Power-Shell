@@ -426,7 +426,14 @@ Writing / Reading from file
   
   $mylist = @{First = "John"; Last = "Doe"; Mid = "Bon"; Age = "69"}
   
+  Can refernce data like
+  $mylist["Last"] or $mylist.last
   
+  $mylist.keys -> returns the keys
+ 
+  $mylist.values -> returns the values
   
-  
-  
+ 
+ $list = @{ ele1 = 5; array1 = 1..5; array2= 6, 7, 8}
+ can have nested arrays in the hash table
+ 
