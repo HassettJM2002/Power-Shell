@@ -221,3 +221,28 @@ Maximum  :
 Minimum  : 
 Property : 
 
+
+PS C:\windows\system32> 'i bet you all cant wait to graduate' > test.txt
+$before = Get-Childitem
+'4' > test.txt
+$after = gci
+
+Compare-Object $before $after -Property length, name
+
+length name     SideIndicator
+------ ----     -------------
+     8 test.txt =>           
+    76 test.txt <= 
+----------------------------------------------------------------
+Creating an Object
+----------------------------------------------------------------
+$MyTruck = New-Object object
+$MyTruck | Get-Member -> if nothing was added, has default properties
+
+$MyTruck = New-Object object
+$MyTruck | Get-Member
+Add-Member -MemberType NoteProperty -Name Color -Value Black -InputObject $MyTruck
+$MyTruck.Color #will return black
+
+Add-Member -me NoteProperty -in(#putobject) $MyTruck -na Make -va Ford
+$MyTruck.Make = Ford
