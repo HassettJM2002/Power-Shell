@@ -343,7 +343,7 @@ if ($x -le 9) {
  if ( Conditional Statemnet ){
    Code Block
  }
- ifelse( Conditional Statement ){
+ elseif( Conditional Statement ){
    Code Block
  }
  else {
@@ -355,5 +355,24 @@ if ($x -le 9) {
  b {"banana"}
  c {"cranberry"}
  }
+ -----------------------
+ Loops
+ -------------------------
+ $nums = 1,2,3,4,5
+ $nums | foreach-object{$_ * 2}
  
- 
+ $list = 'a', 'b', 'c'
+ $list | foreach {$_.ToUpper()}
+
+Get-Childitem | foreach-object {$_.length / 1kb}
+
+foreach ($item in 1..5){$item * 2}
+$teams = "Tiger", "Pistons", "Red Wings", "Lions"
+foreach ($team in  $teams){"Detroit $team"}
+
+$num = 0
+while ($num -lt 3) {
+  $num 
+  $num++
+}
+
