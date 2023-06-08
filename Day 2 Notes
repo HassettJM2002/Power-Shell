@@ -156,4 +156,25 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
    2042      79    38160      62908      21.09   4984   2 explorer                                                                                                 
      37       5     1196       1272       0.00    868   1 fontdrvhost
      
-     
+PS C:\windows\system32> Get-Process | Select-Object name, id -first 4
+
+Name      Id
+----      --
+conhost 2552
+csrss    464
+csrss    556
+csrss   6088
+
+-expand property expans the property
+
+Where-Object - Conditional, outputs what you want the condition to be
+PS C:\windows\system32> get-service | where-object {$_.Status -eq 'running'} | select-object -first 5
+
+Status   Name               DisplayName                           
+------   ----               -----------                           
+Running  Appinfo            Application Information               
+Running  AudioEndpointBu... Windows Audio Endpoint Builder        
+Running  Audiosrv           Windows Audio                         
+Running  BFE                Base Filtering Engine                 
+Running  BrokerInfrastru... Background Tasks Infrastructure Ser...
+
