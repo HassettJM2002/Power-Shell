@@ -199,3 +199,25 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 
 1,2,3,1,2,3 | Sort-Object | Get-Unique #Needs to be in this order, will not work the other way
 
+Measure Object
+
+ PS C:\windows\system32> "hello", "goodbye" | measure-object length
+
+
+Count    : 2
+Average  : 
+Sum      : 
+Maximum  : 
+Minimum  : 
+Property : length
+
+PS C:\windows\system32> 1..10 | Measure-object -average -Sum
+
+
+Count    : 10
+Average  : 5.5
+Sum      : 55
+Maximum  : 
+Minimum  : 
+Property : 
+
