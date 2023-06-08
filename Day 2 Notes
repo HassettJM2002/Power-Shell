@@ -375,4 +375,54 @@ while ($num -lt 3) {
   $num 
   $num++
 }
+-------------------------------------------------------------------------------
+$num = 0
+do {
+ $num
+ $num
+} while($num -lt 3)
 
+#do until
+$num=0
+do {
+  $num
+  $num++
+}until($num -gt 3)
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+for loop
+for ($num = 1; $num -le 3; $num++){$num}
+
+for ($i = 0; $i -le 225; $i++){
+  Write-Host 192.168.$i
+}
+
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+Writing / Reading from file
+
+#read
+  Set-Content -path .\example.txt -value "A String"
+#write
+  Get-Content -path .\example.txt
+  "A new string" > .\example.txt
+  "another one" >> .\example.txt
+  "add-content" -path .\example.txt -value "another one"
+  
+  '"Odoyle RUkes"' > Odoyle-script.ps1
+  .\Odoyle-script.ps1
+  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  @'
+  "Odoyle Rules!"
+  "More code"
+  get-service
+  get-childitem
+  '@ > Anotherdyole-script.ps1
+  
+  .\Anotherdoyle-script.ps1
+  
+  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  Creating a hash table
+  specifies key value pairs
+  ; semi colon to assign the keys
+  
+  $mylist = @{First = "John"; Last = "Doe"; Mid = "Bon"; Age = "69"}
+  
