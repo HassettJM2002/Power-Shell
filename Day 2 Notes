@@ -246,3 +246,15 @@ $MyTruck.Color #will return black
 
 Add-Member -me NoteProperty -in(#putobject) $MyTruck -na Make -va Ford
 $MyTruck.Make = Ford
+
+$MyTruck | Add-Member NoteProperty -Name Model -Value F150
+
+Adding Methods
+ add-member -Membertype ScriptMethod -InputObject $MyTruck 0-name Drive -Value {"Going on a roadtrip"}
+ $MyTruck | Add-Member ScriptMethod -Name Park -Value {"Finding a spot"}
+ $MyTruck | Add-Member Sscriptmethod PistonCup {"He did what in his cup"}
+ PS C:\windows\system32> ($MyTruck).PistonCup()
+ He did what in his cup
+ 
+ 
+ 
