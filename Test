@@ -53,3 +53,8 @@ just need Process blocks
 Procss {
     $sum = $var1 + $var2
     }
+
+--------------------------------------------------
+return date in specific format using uformat
+--------------------------------------------------
+
