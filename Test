@@ -9,3 +9,14 @@ save ps1 and run executable
 
 return $var1+$var2+$var3+$var4
 
+$content = get-content $file
+foreach ($item in $content) {
+    if ( $line.startwith($start) ) {
+        return $line
+    }
+    return $null
+}
+
+function q($arr) {
+  return $arr -join('/') 
+}
