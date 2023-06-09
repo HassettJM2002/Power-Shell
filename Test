@@ -20,3 +20,11 @@ foreach ($item in $content) {
 function q($arr) {
   return $arr -join('/') 
 }
+
+function q() {
+return get-process | sort-object -property Processname -descending
+}
+
+function q() {
+        
+}
