@@ -1,1 +1,40 @@
-adf
+$employee1 = @{
+'First' = 'Mary'
+'Last' = 'Hopper'
+'ID' = '001'
+'Job' = 'Software Developer'
+}
+
+$employee2 = @{
+'First' = 'John'
+'Last' = 'Williams'
+'ID' = '002'
+'Job' = 'Web Developer'
+}
+
+$employee.first = "Mary"
+$employee["last"]= "Hopper"
+
+#$employee1
+#$employee2
+
+$employee2 += @{'Username' = 'mhopper001'}
+$employee2
+
+$employee1["Job"]="Software Lead"
+$employee1
+
+$employeelist = @[ordered]{
+'First' = 'John', 'Alex'
+'Last' = 'Williams', 'Moran'
+'ID' = '002', '003'
+'Job' = 'Web Developer', 'Software Developer'
+}
+
+$employee3=@[ordered]{
+'First' = 'Alex'
+'Last' = 'Moran'
+'ID' = '003'
+'Job' = 'Software Developer'
+}
+$employee3
