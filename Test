@@ -26,5 +26,10 @@ return get-process | sort-object -property Processname -descending
 }
 
 function q() {
-        
+        foreach ($i in $arr) {
+            if ( $i[0] -eq $key ) {
+                return $i[9]
+            }
+        return -1
+        }
 }
