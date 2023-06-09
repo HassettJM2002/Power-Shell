@@ -1,3 +1,5 @@
+underthewire.tech/century-#
+
 $employee1 = @{
 'First' = 'Mary'
 'Last' = 'Hopper'
@@ -134,3 +136,29 @@ comments
 # ....
 <# ........................... #>
 
+-----------------------------------------------------------------------------------------------------
+csv files, comma separated files
+-----------------------------------------------------------------------------------------------------
+get-process | export-csv C:\Users\student\Desktop\getproc
+
+Theres a lot of different file types and some like csv, tsb, and forwards, xml, html
+-----------------------------------------------------------------------------------------------------
+Try {
+get-processes
+}
+
+-ErrorAction silentlyContinue
+
+7 common options
+-verbose
+---------------------------------------------------------------------------------------------------------
+system box information
+-----------------------------------------------------------------------------------------------------------
+WMI or CIM 
+WMI windows manager 
+CIM Common information monitor
+
+get-wmiobject -query "Select" * FROM win32_NetworkAdapterCOnfigaruion WHERE IPEnabled = True"
+get-ciminstance -query "Select" * FROM win32_NetworkAdapterCOnfigaruion WHERE IPEnabled = True"
+
+---------------------------------------------------------------------------------------------------------
