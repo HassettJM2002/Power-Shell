@@ -5,3 +5,7 @@ put command within function to get result
 save ps1 and run executable
 
 
+"return" will get atleast 5 points
+
+return $var1+$var2+$var3+$var4
+
