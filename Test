@@ -35,6 +35,21 @@ function q() {
 }
 
 Advance functions, provided on a pipeline
+function add-nums {
+    
+    Begin {
+        $sum=0
+    }
 Process {
     <Command>
+   }
+   End {
+   $sum
+   }
 }
+
+just need Process blocks
+
+Procss {
+    $sum = $var1 + $var2
+    }
