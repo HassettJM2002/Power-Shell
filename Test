@@ -33,3 +33,8 @@ function q() {
         return -1
         }
 }
+
+Advance functions
+Process {
+    <Command>
+}
