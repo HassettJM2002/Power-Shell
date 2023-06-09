@@ -67,4 +67,5 @@ Get-Service | select-object -first 10 | foreach-object{"The service {0} is call 
 
 "Hello John" -replace "John", "[World]" # [] will change everything, lists nad wil 
 
-(ipconfig) -match 'IPv6'
+(ipconfig) -match 'IPv6', if its an array it will match that line
+
