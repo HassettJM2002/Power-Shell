@@ -34,7 +34,7 @@ function q() {
         }
 }
 
-Advance functions
+Advance functions, provided on a pipeline
 Process {
     <Command>
 }
