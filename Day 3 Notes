@@ -38,3 +38,33 @@ $employee3=@[ordered]{
 'Job' = 'Software Developer'
 }
 $employee3
+
+get special characeters
+"<text> `"<text>`""
+'text "quotation marks"'
+
+system variables denoted by $ can do math inside like $( var + var)
+"Here is another`nline of text"
+
+
+Here strings
+
+text = @"
+Here is a some text with `"quotes`".
+....
+"$PWD" is your current path
+"@
+
+will resolve the variables for you
+
+0 is the index position, can have multiple numbers passed through it
+
+"{0:n3}" -f(#format) 123.456789 -> 123.456, three decimal points
+"{0:n3}" -f(#format) 1 -> 00001, at least 5 digits
+
+Get-Service | select-object -first 10 | foreach-object{"The service {0} is call '{1}': {2}" -f $_.name $_.displayname, $_.Status}
+
+
+"Hello John" -replace "John", "[World]" # [] will change everything, lists nad wil 
+
+(ipconfig) -match 'IPv6'
