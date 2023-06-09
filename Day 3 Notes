@@ -107,3 +107,28 @@ $matches
 $matches
 
 "10.0.0.22" -as [ipaddress] -as [bool]
+-------------------------------------------------------------------------------------------------------
+Functions
+-------------------------------------------------------------------------------------------------------
+function do-switch {
+  param( Parameter(Mandatory=$true)
+  param2 )
+  
+  code block
+
+}
+
+function Convert-ToDollars {
+    param( 
+      [Parameter(Mandatory=$true, Help, Message='Enter number of Euros.')]
+      [Double]
+      $Euro
+    )
+    $Dollar = $Euro * 1.4
+    return USD: $Dollar
+    
+    
+}
+
+comments
+<# ........................... #>
