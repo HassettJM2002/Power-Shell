@@ -58,3 +58,5 @@ Procss {
 return date in specific format using uformat
 --------------------------------------------------
 
+$fmt = "%Y%m%d"
+return Get-Date -uformat $fmt
