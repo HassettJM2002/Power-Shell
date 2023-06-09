@@ -105,3 +105,5 @@ $matches stores matches
 
 $matches
 $matches
+
+"10.0.0.22" -as [ipaddress] -as [bool]
