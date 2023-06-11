@@ -35,4 +35,14 @@ Find Cmdlets Practice:
     
 Running Cmdlets
     
-    Display list of 
+    Display list of processes
+      get-process [-name <>]
+    Get list of processes with wild cards
+      get-process [-name <s*>]
+    Getting the commandlets for aliases
+      get-alias [-name <alias1>,<alias2>,<alias3>]
+    Get firewall rules
+      get-NetFirewallRUle
+    Set aliases
+      set-alias <alias> <cmdlet>
+      get-alias <alias> #to find if the alias was created
