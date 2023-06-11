@@ -34,3 +34,5 @@ Find Cmdlets Practice:
       Read-Host <message to write to the host> #assign it to variable
     
 Running Cmdlets
+    
+    Display list of 
