@@ -4,3 +4,18 @@ to update help without any error messages, similar to bash and send error output
 
 Get-Process: Gets running processes
 Get-Service: Gets services installed on the local computer
+
+To write to or output objects to the screen:
+Two commands, write-host and write-output
+  
+  -write-host: only outputs to the host, cannot be piped
+  -write-output: writes to host and can be used in a pipeline
+  
+Variable manipulation
+
+  Creating Variables:
+    Set-Variable -name <> -value <>
+    New-Variable -name <> -value <>
+  Modify
+  List
+  Delete
