@@ -19,6 +19,6 @@ Variable manipulation
   Modify
     Set-Variable -name <> -value <>
   List
-    Get-Variable
+    Get-Variable -name <>
   Delete
-    Clear-Variable
+    Clear-Variable -name <>
