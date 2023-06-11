@@ -1,1 +1,3 @@
-
+to update help without any error messages, similar to bash and send error output to devnull
+  
+  update-help -force -ErrorAction SilentlyContinue
