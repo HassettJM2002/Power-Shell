@@ -1,34 +1,36 @@
-to update help without any error messages, similar to bash and send error output to devnull
-  
-  update-help -force -ErrorAction SilentlyContinue
+Find Cmdlets Practice:
 
-Get-Process: Gets running processes
-Get-Service: Gets services installed on the local computer
+  to update help without any error messages, similar to bash and send error output to devnull
 
-To write to or output objects to the screen:
-Two commands, write-host and write-output
-  
-  -write-host: only outputs to the host, cannot be piped
-  -write-output: writes to host and can be used in a pipeline
-  
-Variable manipulation
+    update-help -force -ErrorAction SilentlyContinue
 
-  Creating Variables:
-    Set-Variable -name <> -value <>
-    New-Variable -name <> -value <>
-  Modify
-    Set-Variable -name <> -value <>
-  List
-    Get-Variable -name <>
-  Delete
-    Clear-Variable -name <>
-  
-Get a list of commands 
-  
-    Get-Command *<>*
-    
-Reading User Input
-  
-    Read-Host <message to write to the host> #assign it to variable
+  Get-Process: Gets running processes
+  Get-Service: Gets services installed on the local computer
+
+  To write to or output objects to the screen:
+  Two commands, write-host and write-output
+
+    -write-host: only outputs to the host, cannot be piped
+    -write-output: writes to host and can be used in a pipeline
+
+  Variable manipulation
+
+    Creating Variables:
+      Set-Variable -name <> -value <>
+      New-Variable -name <> -value <>
+    Modify
+      Set-Variable -name <> -value <>
+    List
+      Get-Variable -name <>
+    Delete
+      Clear-Variable -name <>
+
+  Get a list of commands 
+
+      Get-Command *<>*
+
+  Reading User Input
+
+      Read-Host <message to write to the host> #assign it to variable
     
 
