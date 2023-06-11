@@ -27,4 +27,8 @@ Get a list of commands
   
     Get-Command *<>*
     
+Reading User Input
+  
+    Read-Host <message to write to the host> #assign it to variable
+    
 
