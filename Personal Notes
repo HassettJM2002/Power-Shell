@@ -22,3 +22,9 @@ Variable manipulation
     Get-Variable -name <>
   Delete
     Clear-Variable -name <>
+  
+Get a list of commands 
+  
+    Get-Command
+    
+
