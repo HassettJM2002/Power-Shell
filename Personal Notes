@@ -60,4 +60,7 @@ Practical Exercise: Variables
         write-output $item
     }
     write-output ""$var1" + "$var2" = "$sum""
-
+    
+    $var1 = Get-Random -Maximum 0 -Minimum -10
+    $var2 = Get-Random -Maximum 20 -Minimum 1
+    $var3= ($var1..$var2 | sort-object -reverse)
