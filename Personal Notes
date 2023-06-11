@@ -60,3 +60,4 @@ Practical Exercise: Variables
         write-output $item
     }
     write-output ""$var1" + "$var2" = "$sum""
+
