@@ -99,3 +99,8 @@ Extend the expression to sort the list by install date, and display only the ins
 Extend the expression further, but this time sort by description, include description, hotfix ID, and install Date.
 
     Get-HotFix | sort-object description | select-object -property installedon, hotfixid, description
+
+
+--------------------------------------------------------------------------------------------------
+PSCustom Object
+--------------------------------------------------------------------------------------------------
