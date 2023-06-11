@@ -25,6 +25,6 @@ Variable manipulation
   
 Get a list of commands 
   
-    Get-Command
+    Get-Command *<>*
     
 
