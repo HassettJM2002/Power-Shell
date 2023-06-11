@@ -77,3 +77,25 @@ $hash2= [ordered]@{ #create hash with key / value
 $hash1["Key1"]="Value1" #index method to add key / value
 
 $hash1.add("Key2","Value2") #add method to add key / value
+---------------------------------------------------------------------
+Pipeline
+---------------------------------------------------------------------
+Display the start time of the earliest and latest running processes
+
+    Get-Process | sort-object -property StartTime | select-object -property name, starttime -skip 1 -first 1 -last 1
+
+Identify a cmdlet that returns the current date and time then using this cmdlet and Select-object, display only the current day of the week
+  
+    get-date | select-object -property dayofweek
+
+Identify a cmdlet that displays a list of installed hotfixes.
+
+    get-hotfix
+
+Extend the expression to sort the list by install date, and display only the install date and hotfix ID.
+
+    Get-HotFix | select-object -property installedon, hotfixid
+
+Extend the expression further, but this time sort by description, include description, hotfix ID, and install Date.
+
+    Get-HotFix | sort-object description | select-object -property installedon, hotfixid, description
