@@ -46,7 +46,7 @@ Running Cmdlets
     Set aliases
       set-alias <alias> <cmdlet>
       get-alias <alias> #to find if the alias was created
-
+-----------------------------------------------------------------------
 Practical Exercise: Variables
     $var1 = Get-Random -Maximum 50 -Minimum 25
     $var2 = Get-Random -Maximum 10 -Minimum 1
@@ -64,3 +64,16 @@ Practical Exercise: Variables
     $var1 = Get-Random -Maximum 0 -Minimum -10
     $var2 = Get-Random -Maximum 20 -Minimum 1
     $var3= ($var1..$var2 | sort-object -reverse)
+
+------------------------------------------------------------------------
+Hash Tables
+------------------------------------------------------------------------
+$hash1 = [ordered]@{} #create an empty hash table
+
+$hash2= [ordered]@{ #create hash with key / value
+    "key"="value"
+}
+
+$hash1["Key1"]="Value1" #index method to add key / value
+
+$hash1.add("Key2","Value2") #add method to add key / value
