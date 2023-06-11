@@ -46,3 +46,17 @@ Running Cmdlets
     Set aliases
       set-alias <alias> <cmdlet>
       get-alias <alias> #to find if the alias was created
+
+Practical Exercise: Variables
+    $var1 = Get-Random -Maximum 50 -Minimum 25
+    $var2 = Get-Random -Maximum 10 -Minimum 1
+
+    $sum =  $var1 + $var2
+    $sub =  $var1 - $var2
+    $prod = $var1 * $var2
+    $quo =  $var1 / $var2
+
+    foreach ($item in $sum,$sub,$prod,$quo) {
+        write-output $item
+    }
+    write-output ""$var1" + "$var2" = "$sum""
