@@ -1,7 +1,24 @@
+--------------------------------------------------------------------------------------------------
+Where-Object
+--------------------------------------------------------------------------------------------------
 The use of where-object
 Example 
 
   Get-Process | where-object {$_.name -eq "winlogon"} #!# the eq needs to be in relation to a string
   
   Get-Process | where-object {$_.name -like "powershell*"}
-  
+
+  {$_.property -conditional "compared to"}
+
+--------------------------------------------------------------------------------------------------
+PSCustomObject
+--------------------------------------------------------------------------------------------------
+$MyTruck = New-Object object
+Add-Member -MemberType NoteProperty -Name Color -Value Black -InputObject $MyTruck
+add-member -Membertype ScriptMethod -InputObject $MyTruck 0-name Drive -Value {"Going on a roadtrip"}
+
+$MyTruck | Add-Member ScriptMethod -Name Park -Value {"Finding a spot"}
+
+--------------------------------------------------------------------------------------------------
+Where-Object
+--------------------------------------------------------------------------------------------------
