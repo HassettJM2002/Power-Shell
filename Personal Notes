@@ -118,3 +118,4 @@ $CustomObject | Get-member
 
 
 $
+./exam.ps1
