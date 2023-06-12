@@ -1,1 +1,12 @@
+q1)
 
+  return $var1 + $var2 ... + $varN
+
+q2)
+
+  foreach ($item in $arr) {
+        if ( $item[0] -eq $key ) {
+            return $item[9]
+        }
+    }
+  return -1
