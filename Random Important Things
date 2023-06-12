@@ -20,5 +20,5 @@ add-member -Membertype ScriptMethod -InputObject $MyTruck 0-name Drive -Value {"
 $MyTruck | Add-Member ScriptMethod -Name Park -Value {"Finding a spot"}
 
 --------------------------------------------------------------------------------------------------
-Where-Object
+
 --------------------------------------------------------------------------------------------------
