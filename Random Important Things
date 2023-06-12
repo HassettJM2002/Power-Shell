@@ -34,7 +34,7 @@ Example:
         [string] $Name
     )
 
-    Process
+    Process #This is what makes an advanced function and advanced function
     {
         Write-Host ("Hello " + $Name + "!")
     }
