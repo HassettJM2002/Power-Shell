@@ -20,5 +20,22 @@ add-member -Membertype ScriptMethod -InputObject $MyTruck 0-name Drive -Value {"
 $MyTruck | Add-Member ScriptMethod -Name Park -Value {"Finding a spot"}
 
 --------------------------------------------------------------------------------------------------
-
+Advanced Functions
 --------------------------------------------------------------------------------------------------
+Introduces advanced functions that are a way to create cmdlets using scripts.
+
+Example:
+
+  function Send-Greeting
+{
+    [CmdletBinding()]
+    Param(
+        [Parameter(Mandatory=$true)]
+        [string] $Name
+    )
+
+    Process
+    {
+        Write-Host ("Hello " + $Name + "!")
+    }
+}
