@@ -1,0 +1,5 @@
+The use of where-object
+Example 
+
+  Get-Process | where-object {$_.name -eq "winlogon"} #!# the eq needs to be in relation to a string
+  
