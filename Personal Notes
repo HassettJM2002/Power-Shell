@@ -104,3 +104,17 @@ Extend the expression further, but this time sort by description, include descri
 --------------------------------------------------------------------------------------------------
 PSCustom Object
 --------------------------------------------------------------------------------------------------
+
+$CustomObject = [PSCustomObject]@{
+"Property" = "Value for that Property"
+#Example
+"MOS" = "17C"
+}
+$CustomObject
+
+#To Get the members of a custom object
+$CustomObject | Get-member
+
+
+
+$
